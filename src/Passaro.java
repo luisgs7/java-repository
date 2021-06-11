@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class Passaro {
+public class Passaro extends Animal{
+
+    public void correr(){
+        super.correr();
+        System.out.println("Passaro");
+    }
 }
