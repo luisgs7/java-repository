@@ -1,6 +1,7 @@
-public class Classes {
+public class User {
+    String nome = "";
 
-    public static void main(String[] args) {
-        
+    public void login(){
+        System.out.println("Login com Sucesso");
     }
 }
