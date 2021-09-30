@@ -1,5 +1,8 @@
 import banco.Conta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         User user = new User();
@@ -33,5 +36,38 @@ public class Main {
         conta.saque(50);
 
         System.out.println(conta.getSaldo());
+
+        NewUser novoUser = new NewUser();
+
+        novoUser.setFirstName("Lucas");
+
+        novoUser.setLastName(" José");
+
+        System.out.println(novoUser.getFirstName() + novoUser.getLastName());
+
+        NewUser[] users = new NewUser[10];
+
+        for (int i = 0; i < users.length; i++) {
+            NewUser atual = new NewUser();
+            atual.setFirstName("Nome " + i);
+            atual.setLastName("Sobrenome " + i);
+            users[i] = atual;
+        }
+
+        System.out.println(users[2].getFirstName());
+        System.out.println(users[2].getLastName());
+
+        List<NewUser> users2 = new ArrayList<>();
+
+        int i = 0;
+        while (i < 10){
+            NewUser atual = new NewUser();
+            atual.setFirstName("Nome02 " + i);
+            atual.setLastName("Sobrenome02 " + i);
+            users2.add(atual);
+            i++;
+        }
+        System.out.println(users2.get(2).getFirstName());
+        System.out.println(users2.get(2).getLastName());
     }
 }
