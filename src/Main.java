@@ -1,3 +1,6 @@
+import Interface.Cidadao;
+import Interface.José;
+import Interface.Obama;
 import banco.Conta;
 
 import java.util.ArrayList;
@@ -69,5 +72,23 @@ public class Main {
         }
         System.out.println(users2.get(2).getFirstName());
         System.out.println(users2.get(2).getLastName());
+
+        // Constantes em Java
+        final String nome = "José";
+        // nome = "Lucas";
+        System.out.println("Constante: " + nome);
+
+        System.out.println("Sobrecarga de métodos");
+        Pessoa pessoa = new Pessoa();
+        pessoa.exibirDados("José");
+        pessoa.exibirDados("Pedro", 45);
+
+        System.out.println("Interface");
+        Obama obama = new Obama();
+        obama.direitosDeveres();
+        obama.ganharEleicao();
+
+        José josé = new José();
+        josé.ganharEleicao();
     }
 }
